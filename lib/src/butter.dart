@@ -1,9 +1,9 @@
-import 'package:buttercms_flutter/src/files/pages.dart';
-import 'package:buttercms_flutter/src/files/content.dart';
-import 'package:buttercms_flutter/src/files/posts.dart';
-import 'package:buttercms_flutter/src/files/authors.dart';
-import 'package:buttercms_flutter/src/files/categories.dart';
-import 'package:buttercms_flutter/src/files/tags.dart';
+import 'package:buttercms_dart/src/files/pages.dart';
+import 'package:buttercms_dart/src/files/content.dart';
+import 'package:buttercms_dart/src/files/posts.dart';
+import 'package:buttercms_dart/src/files/authors.dart';
+import 'package:buttercms_dart/src/files/categories.dart';
+import 'package:buttercms_dart/src/files/tags.dart';
 
 class Butter {
   final String _apiKey;

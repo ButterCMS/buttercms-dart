@@ -1,5 +1,5 @@
 import 'package:http/http.dart';
-import 'package:buttercms_flutter/src/files/butter_constants.dart';
+import 'package:buttercms_dart/src/files/butter_constants.dart';
 
 /// Helper class for retrieving data from pages
 class Pages {

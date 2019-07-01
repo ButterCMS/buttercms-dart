@@ -1,4 +1,4 @@
-# buttercms_flutter
+# buttercms_dart
 
 The official ButterCMS package for Flutter.
 
