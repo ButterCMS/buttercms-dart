@@ -9,13 +9,15 @@ class Content {
 
   /// Retrieves tables from Collections
   /// [keys] is a list of all the collections to retrieve
-  /// [locale] allows retrieval of different locales
+  /// [params] is a Map used to add additional parameters to the query
   Future<Response> retrieve(
-    List<String> keys, {
-    String locale,
-    int preview,
-  }) {
-    Map<String, String> params = {"auth_token": _apiKey};
+    List<String> keys, [
+    Map<String, String> params,
+  ]) {
+    if (params != null)
+      params["auth_token"] = _apiKey;
+    else
+      params = {"auth_token": _apiKey};
     if (keys != null) {
       String param = "";
       for (int i = 0; i < keys.length; i++) {
@@ -25,12 +27,6 @@ class Content {
         }
       }
       params["keys"] = param;
-    }
-    if (locale != null) {
-      params["locale"] = locale;
-    }
-    if (preview != null) {
-      params["preview"] = preview.toString();
     }
     return get(Uri.https(baseUrl, "$contentEndpoint", params));
   }

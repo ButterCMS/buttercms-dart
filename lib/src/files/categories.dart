@@ -8,24 +8,26 @@ class Categories {
   Categories(this._apiKey);
 
   /// Retrieves a single category using slug
-  /// [slug] indicates the unique category slug
-  /// [include] indicates details to include in response (try include: recent_posts)
-  Future<Response> retrieve({
-    String slug,
-    String include,
-  }) {
-    Map<String, String> params = {"auth_token": _apiKey, "slug": slug};
-    if (include != null) params["include"] = include;
+  /// [params] is a Map used to add additional parameters to the query
+  Future<Response> retrieve([
+    Map<String, String> params,
+  ]) {
+    if (params != null)
+      params["auth_token"] = _apiKey;
+    else
+      params = {"auth_token": _apiKey};
     return get(Uri.https(baseUrl, "$categoriesEndpoint", params));
   }
 
   /// Lists all categories
-  /// [include] indicates details to include in response (try include: recent_posts)
-  Future<Response> list({
-    String include,
-  }) {
-    Map<String, String> params = {"auth_token": _apiKey};
-    if (include != null) params["include"] = include;
+  /// [params] is a Map used to add additional parameters to the query
+  Future<Response> list([
+    Map<String, String> params,
+  ]) {
+    if (params != null)
+      params["auth_token"] = _apiKey;
+    else
+      params = {"auth_token": _apiKey};
     return get(Uri.https(baseUrl, "$categoriesEndpoint", params));
   }
 }

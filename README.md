@@ -19,21 +19,37 @@ Every resource is accessed via your butter instance:
 Every resource method returns a Future:
 
     // Get blog posts
-    butter.post.list(page: 1, pageSize: 10).then((response) {
+    butter.post.list({'page': '1', 'pageSize': '10').then((response) {
       print(response);
     });
-    
+
+## Pages
+
+   * page
+      *     retrieve(page_type, page_slug[, params])
+      *     list(page_type[, params])
+      
+    // Get page
+    butter.page.retrieve('casestudy', 'acme-co').then((response) {
+      print(response);
+    });
+
 ## Content fields
 
-content
-    retrieve(keys)
+   * content
+      *     retrieve(keys)
+      
+    // Get FAQ
+    butter.content.retrieve(["demo-key"]).then((resp) {
+      print(resp);
+    });
     
 ### Localization
 
 Setup locales in the ButterCMS dashboard and fetch localized content using the locale option:
 
     // Get FAQ
-    butter.content.retrieve(["faq"], locale: 'es').then((resp) {
+    butter.content.retrieve(["faq"], {'locale': 'es'}).then((resp) {
       print(resp);
     });
 

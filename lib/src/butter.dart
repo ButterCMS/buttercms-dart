@@ -6,6 +6,8 @@ import 'package:buttercms_dart/src/files/categories.dart';
 import 'package:buttercms_dart/src/files/tags.dart';
 
 class Butter {
+
+  /// The API token for Butter user
   final String _apiKey;
 
   Pages page;
