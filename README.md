@@ -19,7 +19,7 @@ Every resource is accessed via your butter instance:
 Every resource method returns a Future:
 
     // Get blog posts
-    butter.post.list({'page': '1', 'pageSize': '10').then((response) {
+    butter.post.list({'page': '1', 'pageSize': '10'}).then((response) {
       print(response);
     });
 
