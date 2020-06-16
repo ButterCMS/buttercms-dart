@@ -8,3 +8,4 @@ const postsEndpoint = "v2/posts";
 const authorsEndpoint = "v2/authors";
 const categoriesEndpoint = "v2/categories";
 const tagsEndpoint = "v2/tags";
+const postSearchEndpoint = "v2/search";
