@@ -47,6 +47,6 @@ class Posts {
     } else
       params = {"auth_token": _apiKey, "query": query};
 
-    return get(Uri.https(baseUrl, "$postsEndpoint", params));
+    return get(Uri.https(baseUrl, "$postSearchEndpoint", params));
   }
 }
