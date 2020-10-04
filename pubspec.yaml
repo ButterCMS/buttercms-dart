@@ -1,6 +1,6 @@
 name: buttercms_dart
 description: The official ButterCMS package for Flutter. Use the full feature set Butter offers, now available on Flutter.
-version: 0.1.1
+version: 0.2.0
 authors:
   - ButterCMS Team <support@buttercms.com>
   - Deven Joshi <deven9852@gmail.com>
@@ -10,13 +10,10 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  http: ^0.12.0+2
-  flutter:
-    sdk: flutter
+  http: ^0.12.2
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  test: 1.15.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
