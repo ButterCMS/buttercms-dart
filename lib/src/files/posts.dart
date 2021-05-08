@@ -11,7 +11,7 @@ class Posts {
   /// [params] is a Map used to add additional parameters to the query
   Future<Response> retrieve(
     String slug, [
-    Map<String, String> params,
+    Map<String, String>? params,
   ]) {
     if (params != null) {
       params["auth_token"] = _apiKey;
@@ -25,7 +25,7 @@ class Posts {
   /// Lists multiple posts according to page size
   /// [params] is a Map used to add additional parameters to the query
   Future<Response> list([
-    Map<String, String> params,
+    Map<String, String>? params,
   ]) {
     if (params != null)
       params["auth_token"] = _apiKey;
@@ -39,7 +39,7 @@ class Posts {
   /// [params] is a Map used to add additional parameters to the query
   Future<Response> search(
     String query, [
-    Map<String, String> params,
+    Map<String, String>? params,
   ]) {
     if (params != null) {
       params["auth_token"] = _apiKey;

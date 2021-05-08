@@ -9,12 +9,12 @@ class Butter {
   /// The API token for Butter user
   final String _apiKey;
 
-  Pages page;
-  Content content;
-  Posts post;
-  Authors author;
-  Categories category;
-  Tags tag;
+  Pages? page;
+  Content? content;
+  Posts? post;
+  Authors? author;
+  Categories? category;
+  Tags? tag;
 
   Butter(this._apiKey) {
     if (_apiKey == "") {

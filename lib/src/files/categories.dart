@@ -10,7 +10,7 @@ class Categories {
   /// Retrieves a single category using slug
   /// [params] is a Map used to add additional parameters to the query
   Future<Response> retrieve([
-    Map<String, String> params,
+    Map<String, String>? params,
   ]) {
     if (params != null)
       params["auth_token"] = _apiKey;
@@ -22,7 +22,7 @@ class Categories {
   /// Lists all categories
   /// [params] is a Map used to add additional parameters to the query
   Future<Response> list([
-    Map<String, String> params,
+    Map<String, String>? params,
   ]) {
     if (params != null)
       params["auth_token"] = _apiKey;
