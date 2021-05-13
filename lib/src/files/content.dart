@@ -12,7 +12,7 @@ class Content {
   /// [params] is a Map used to add additional parameters to the query
   Future<Response> retrieve(
     List<String> keys, [
-    Map<String, String> params,
+    Map<String, String>? params,
   ]) {
     if (params != null)
       params["auth_token"] = _apiKey;

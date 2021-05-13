@@ -14,7 +14,7 @@ class Pages {
   Future<Response> retrieve(
     String pageType,
     String pageSlug, [
-    Map<String, String> params,
+    Map<String, String>? params,
   ]) {
     if (params != null)
       params["auth_token"] = _apiKey;
@@ -30,7 +30,7 @@ class Pages {
   /// [params] is a Map used to add additional parameters to the query
   Future<Response> list(
     String pageType, [
-    Map<String, String> params,
+    Map<String, String>? params,
   ]) {
     if (params != null)
       params["auth_token"] = _apiKey;
