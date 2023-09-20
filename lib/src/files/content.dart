@@ -18,16 +18,16 @@ class Content {
       params["auth_token"] = _apiKey;
     else
       params = {"auth_token": _apiKey};
-    if (keys != null) {
-      String param = "";
-      for (int i = 0; i < keys.length; i++) {
-        param = param + keys[i];
-        if (i != keys.length - 1) {
-          param = param + ",";
-        }
+
+    String param = "";
+    for (int i = 0; i < keys.length; i++) {
+      param = param + keys[i];
+      if (i != keys.length - 1) {
+        param = param + ",";
       }
-      params["keys"] = param;
     }
+    params["keys"] = param;
+
     return get(Uri.https(baseUrl, "$contentEndpoint", params));
   }
 }
